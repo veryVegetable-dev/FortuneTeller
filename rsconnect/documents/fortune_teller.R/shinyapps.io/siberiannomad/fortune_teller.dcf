@@ -1,0 +1,13 @@
+name: fortune_teller
+title: fortune_teller
+username:
+account: siberiannomad
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4267344
+bundleId: 4715137
+url: https://siberiannomad.shinyapps.io/fortune_teller/
+when: 1623683420.85726
+lastSyncTime: 1623683420.85728
+asMultiple: FALSE
+asStatic: FALSE
