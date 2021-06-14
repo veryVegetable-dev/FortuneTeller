@@ -1,0 +1,11 @@
+date	period	sleeping	resting_heart_rate	task	duration	real_luck	pred_luck
+20210605	4	7	90	job	2	0	0
+20210608	7	7	90	housework	6	0	0
+20210609	8	7	90	outdoor	2	0	0
+20210611	10	8	75	work_out	0.5	1	1
+20210612	11	8	75	work_out	0.5	1	1
+20210612	11	8	75	job	2	1	1
+20210613	12	7	89	job	1	0	0
+20210503	30	6	75	work_out	8	0	0
+20210504	1	6	75	work_out	8	0	0
+20210502	29	7	75	work_out	8	1	1
