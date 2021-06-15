@@ -11,11 +11,11 @@ saveData <- function(data, teller_model, logPath) {
   curr_line = t(data)
   test_data = data.frame(curr_line)
   names(test_data) = fields[1:num_fields_input]
-  test_data$period = as.numeric(test_data$period)
-  test_data$sleeping = as.numeric(test_data$sleeping)
-  test_data$resting_heart_rate = as.numeric(test_data$resting_heart_rate)
+  test_data$period = as.numeric(as.character(test_data$period))
+  test_data$sleeping = as.numeric(as.character(test_data$sleeping))
+  test_data$resting_heart_rate = as.numeric(as.character(test_data$resting_heart_rate))
   test_data$task = factor(test_data$task)
-  test_data$duration = as.numeric(test_data$duration)
+  test_data$duration = as.numeric(as.character(test_data$duration))
   test_data$luck = data.frame(predict(teller_model, newdata=test_data, type="prob"))[, 2]
   write(x = as.vector(t(test_data)), ncolumns = num_fields_before_fix, sep = "\t", file = logPath, append = TRUE)
 }
