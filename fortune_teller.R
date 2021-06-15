@@ -54,11 +54,7 @@ shinyApp(
   
   server = function(input, output, session) {
 
-    # write pred res col names 
-    predPath = paste(c("pred.", Sys.Date()), collapse = "")
-    file.create(predPath)
-    
-    write(x = fields[1:num_fields_before_fix], ncolumns = num_fields_before_fix, sep = "\t", file = predPath, append = TRUE)
+    predPath = "pred"
     
     # load rpart model 
     teller_model = readRDS("teller.model")
