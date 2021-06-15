@@ -5,9 +5,9 @@ account: siberiannomad
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 4267344
-bundleId: 4717266
+bundleId: 4717379
 url: https://siberiannomad.shinyapps.io/fortune_teller/
-when: 1623724575.10864
-lastSyncTime: 1623724575.10865
+when: 1623728242.31852
+lastSyncTime: 1623728242.31854
 asMultiple: FALSE
 asStatic: FALSE
