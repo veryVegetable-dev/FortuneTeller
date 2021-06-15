@@ -22,7 +22,7 @@ saveData <- function(data, teller_model, logPath) {
 
 fixLuck <- function(data, logPath) {
   predData = read.delim(logPath)
-  predData$fixLuck = t(strsplit(data, ","))[[1]]
+  predData$fixed_luck = t(strsplit(data, ","))[[1]]
   names(predData) = fields
   file.remove(logPath)
   file.create(logPath)
