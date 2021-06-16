@@ -32,14 +32,14 @@ fixLuck <- function(data, logPath) {
 
 loadData <- function(logPath) {
   data <- read.delim(logPath)
-  data
+  data[order(data$date, decreasing = TRUE), ]
 }
 
 
 shinyApp(
   
   ui = fluidPage(
-    DT::dataTableOutput("responses", width = 300), tags$hr(),
+    DT::dataTableOutput("responses", width = 1300), tags$hr(),
     textInput(fields[1], "date:", ""),
     textInput(fields[2], "period:", ""),
     textInput(fields[3], "sleep hrs last night:", ""),

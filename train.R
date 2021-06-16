@@ -1,10 +1,10 @@
 library(rpart)
 
-logPath = "train_data.txt"
+logPath = "pred"
 
 # train data 
 log <- read.delim(logPath)
-y = log$real_luck
+y = log$fixed_luck
 period = log$period
 sleeping = log$sleeping
 resting_heart_rate = log$resting_heart_rate
