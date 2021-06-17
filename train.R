@@ -1,4 +1,6 @@
 library(rpart)
+library(rpart.plot)
+
 
 logPath = "pred"
 
@@ -15,5 +17,7 @@ duration=log$duration
 rpart_param = rpart.control(minsplit = 1, minbucket = 1)
 cfit <- rpart(y ~ period + sleeping + resting_heart_rate + task + duration, data = log, method = 'class', control = rpart_param)
 saveRDS(cfit, "teller.model")
+cfit = readRDS("teller.model")
+p = rpart.plot(cfit)
 
 

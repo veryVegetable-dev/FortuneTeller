@@ -1,4 +1,5 @@
 library(shiny)
+library(rpart.plot)
 
 
 fields <- c("date", "period", "sleeping", "resting_heart_rate", "task", "duration", "detail", "luck", "fixed_luck")
@@ -40,6 +41,7 @@ shinyApp(
   
   ui = fluidPage(
     DT::dataTableOutput("responses", width = 1300), tags$hr(),
+    plotOutput("tree"), 
     textInput(fields[1], "date:", ""),
     textInput(fields[2], "period:", ""),
     textInput(fields[3], "sleep hrs last night:", ""),
@@ -58,6 +60,11 @@ shinyApp(
     
     # load rpart model 
     teller_model = readRDS("teller.model")
+    
+    # plot the tree 
+    output$tree <- renderPlot({
+      rpart.plot(teller_model)
+    })
     
     # get input data and make prediction
     formData <- reactive({
