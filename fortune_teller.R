@@ -50,8 +50,6 @@ shinyApp(
     textInput(fields[6], "duration:", ""), 
     textInput(fields[7], "detail:", ""), 
     actionButton("submit_date_info", "Bless Me"), 
-    textInput("fix_luck", "fix luck (sep with comma):", ""),
-    actionButton("submit_fix", "Fix Luck")
   ),
   
   server = function(input, output, session) {
